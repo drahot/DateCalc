@@ -16,18 +16,18 @@ public func -(lhs: Date, rhs: DateComponents) -> Date {
     lhs + minus(rhs)
 }
 
-private func minus(_ dateComponents: DateComponents) -> DateComponents {
+private func minus(_ dt: DateComponents) -> DateComponents {
     var dateComponents = DateComponents()
-    dateComponents.era = dateComponents.era.map(-)
-    dateComponents.nanosecond = dateComponents.nanosecond.map(-)
-    dateComponents.second = dateComponents.second.map(-)
-    dateComponents.minute = dateComponents.minute.map(-)
-    dateComponents.hour = dateComponents.hour.map(-)
-    dateComponents.day = dateComponents.day.map(-)
-    dateComponents.month = dateComponents.month.map(-)
-    dateComponents.year = dateComponents.year.map(-)
-    dateComponents.quarter = dateComponents.quarter.map(-)
-    dateComponents.weekdayOrdinal = dateComponents.weekdayOrdinal.map(-)
-    dateComponents.weekOfMonth = dateComponents.weekOfMonth.map(-)
+    dateComponents.era = dt.era.map(-)
+    dateComponents.nanosecond = dt.nanosecond.map(-)
+    dateComponents.second = dt.second.map(-)
+    dateComponents.minute = dt.minute.map(-)
+    dateComponents.hour = dt.hour.map(-)
+    dateComponents.day = dt.day.map(-)
+    dateComponents.month = dt.month.map(-)
+    dateComponents.year = dt.year.map(-)
+    dateComponents.quarter = dt.quarter.map(-)
+    dateComponents.weekdayOrdinal = dt.weekdayOrdinal.map(-)
+    dateComponents.weekOfMonth = dt.weekOfMonth.map(-)
     return dateComponents
 }

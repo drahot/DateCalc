@@ -5,6 +5,7 @@
 import Foundation
 
 fileprivate let components: [Calendar.Component] = [
+    .era,
     .nanosecond,
     .second,
     .minute,
@@ -12,7 +13,10 @@ fileprivate let components: [Calendar.Component] = [
     .day,
     .month,
     .year,
-    .quarter
+    .quarter,
+    .weekdayOrdinal,
+    .weekOfYear,
+    .weekOfMonth
 ]
 
 public extension Int {

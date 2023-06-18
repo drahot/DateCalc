@@ -5,7 +5,7 @@
 import Foundation
 
 public func -(lhs: Date, rhs: Date) -> DateComponents {
-    DateCalc.calendar.dateComponents(allComponentsSet, from: rhs, to: lhs)
+    DateCalc.calendar.dateComponents(calendarComponentsSet, from: rhs, to: lhs)
 }
 
 public func +(lhs: Date, rhs: DateComponents) -> Date {

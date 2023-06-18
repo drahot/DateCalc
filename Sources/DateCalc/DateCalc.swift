@@ -20,7 +20,7 @@ public struct DateCalc {
     }
 }
 
-let allComponentsSet: Set<Calendar.Component> = [
+let calendarComponentsSet: Set<Calendar.Component> = [
     .era,
     .year,
     .month,

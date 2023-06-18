@@ -18,16 +18,18 @@ public struct DateCalc {
 
     public private(set) static var calendar: Calendar = Calendar.current
 
-    public static func initialize(zone: TimeZone? = nil, locale: Locale? = nil) {
-        guard initialized == false else {
+    public static func initialize(calendar: Calendar = Calendar.current, timeZone: TimeZone? = nil, locale: Locale? = nil) {
+        guard !initialized else {
             return
         }
         initialized = true
-        if let zone = zone {
-            calendar.timeZone = zone
+
+        Self.calendar = calendar
+        if let timeZone = timeZone {
+            Self.calendar.timeZone = timeZone
         }
         if let locale = locale {
-            calendar.locale = locale
+            Self.calendar.locale = locale
         }
     }
 }

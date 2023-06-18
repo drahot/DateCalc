@@ -16,7 +16,7 @@ public func -(lhs: Date, rhs: DateComponents) -> Date {
     lhs + minus(rhs)
 }
 
-fileprivate func minus(_ dateComponents: DateComponents) -> DateComponents {
+private func minus(_ dateComponents: DateComponents) -> DateComponents {
     var dateComponents = DateComponents()
     dateComponents.era = dateComponents.era.map(-)
     dateComponents.nanosecond = dateComponents.nanosecond.map(-)

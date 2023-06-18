@@ -54,7 +54,6 @@ let calendarComponentsSet: Set<Calendar.Component> = [
 ]
 
 let calendarComponents: [Calendar.Component] = [
-    .era,
     .nanosecond,
     .second,
     .minute,

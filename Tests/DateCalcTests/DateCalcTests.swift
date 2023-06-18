@@ -29,17 +29,15 @@ final class DateCalcTests: XCTestCase {
     func testCalculate() throws {
         let calendar = DateCalc.calendar
         let date = Date()
-//        print(date + 1.days)
-        print(date - 1.days)
-
-
         XCTAssertEqual(date + 1.days, calendar.date(byAdding: .day, value: 1, to: date)!)
         XCTAssertEqual(date - 1.days, calendar.date(byAdding: .day, value: -1, to: date)!)
-
-        // XCTest Documenationr
-        // https://developer.apple.com/documentation/xctest
-
-        // Defining Test Cases and Test Methods
-        // https://developer.apple.com/documentation/xctest/defining_test_cases_and_test_methods
+        XCTAssertEqual(date + 1.months, calendar.date(byAdding: .month, value: 1, to: date)!)
+        XCTAssertEqual(date - 20.months, calendar.date(byAdding: .month, value: -20, to: date)!)
+        XCTAssertEqual(date + 10.years, calendar.date(byAdding: .year, value: 10, to: date)!)
+        XCTAssertEqual(date - 20.years, calendar.date(byAdding: .year, value: -20, to: date)!)
+        XCTAssertEqual(date + 10.seconds, calendar.date(byAdding: .second, value: 10, to: date)!)
+        XCTAssertEqual(date - 10.seconds, calendar.date(byAdding: .second, value: -10, to: date)!)
+        XCTAssertEqual(date + 1.weeks, calendar.date(byAdding: .weekOfYear, value: 1, to: date)!)
     }
+
 }

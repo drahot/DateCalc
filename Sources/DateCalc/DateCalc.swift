@@ -7,6 +7,7 @@ public struct DateCalc {
 
     private init() {
     }
+
     private static var initialized: Bool = false
 
     public static var isInitialized: Bool {

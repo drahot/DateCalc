@@ -4,11 +4,15 @@
 
 import Foundation
 
-public func + (lhs: Date, rhs: DateComponents) -> Date {
-    Calendar.current.date(byAdding: rhs, to: lhs)!
+public func -(lhs: Date, rhs: Date) -> DateComponents {
+    DateCalc.calendar.dateComponents(allComponentsSet, from: rhs, to: lhs)
 }
 
-public func - (lhs: Date, rhs: DateComponents) -> Date {
+public func +(lhs: Date, rhs: DateComponents) -> Date {
+    DateCalc.calendar.date(byAdding: rhs, to: lhs)!
+}
+
+public func -(lhs: Date, rhs: DateComponents) -> Date {
     lhs + minus(rhs)
 }
 

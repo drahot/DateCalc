@@ -4,26 +4,11 @@
 
 import Foundation
 
-fileprivate let components: [Calendar.Component] = [
-    .era,
-    .nanosecond,
-    .second,
-    .minute,
-    .hour,
-    .day,
-    .month,
-    .year,
-    .quarter,
-    .weekdayOrdinal,
-    .weekOfYear,
-    .weekOfMonth
-]
-
 public extension Int {
 
     fileprivate func toDateComponents(_ type: Calendar.Component) -> DateComponents {
         var dateComponents = DateComponents()
-        components.forEach {
+        calendarComponents.forEach {
             dateComponents.setValue(0, for: $0)
         }
         dateComponents.setValue(self, for: type)

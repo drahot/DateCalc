@@ -8,7 +8,7 @@ final class DateCalcTests: XCTestCase {
     func testInitialize() {
         let defaultCalendar = Calendar.current
 
-        XCTAssertEqual(DateCalc.calendar.locale, defaultCalendar.locale)
+        XCTAssertEqual(DateCalc.calendar.locale!, defaultCalendar.locale!)
         XCTAssertEqual(DateCalc.calendar.timeZone, defaultCalendar.timeZone)
 
         let timeZone = TimeZone(identifier: "Asia/Tokyo")!
@@ -20,7 +20,7 @@ final class DateCalcTests: XCTestCase {
             locale: locale
         )
 
-        XCTAssertEqual(DateCalc.calendar.locale, locale)
+        XCTAssertEqual(DateCalc.calendar.locale!, locale)
         XCTAssertEqual(DateCalc.calendar.timeZone, timeZone)
     }
 

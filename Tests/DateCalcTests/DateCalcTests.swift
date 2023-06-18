@@ -1,8 +1,17 @@
 import XCTest
+
 @testable import DateCalc
 
 final class DateCalcTests: XCTestCase {
+
+    func testInitialize() {
+
+
+
+    }
     func testExample() throws {
+
+
         // XCTest Documenation
         // https://developer.apple.com/documentation/xctest
 

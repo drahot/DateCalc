@@ -7,15 +7,26 @@ public struct DateCalc {
 
     private init() {
     }
+    private static var initialized: Bool = false
 
-    public static var calendar: Calendar = Calendar.current
+    public static var isInitialized: Bool {
+        get {
+            Self.initialized
+        }
+    }
+
+    public private(set) static var calendar: Calendar = Calendar.current
 
     public static func initialize(zone: TimeZone? = nil, locale: Locale? = nil) {
+        guard initialized == false else {
+            return
+        }
+        initialized = true
         if let zone = zone {
-            Self.calendar.timeZone = zone
+            calendar.timeZone = zone
         }
         if let locale = locale {
-            Self.calendar.locale = locale
+            calendar.locale = locale
         }
     }
 }

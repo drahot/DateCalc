@@ -1,2 +1,2 @@
 # DateCalc
-Swift Date Calculator
+Date Calculator

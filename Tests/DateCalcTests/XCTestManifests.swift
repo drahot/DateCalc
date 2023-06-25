@@ -6,7 +6,7 @@ extension DateCalcTests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__DateCalcTests = [
-        ("testExample", testExample),
+        ("DateCalcTests", DateCalcTests),
     ]
 }
 

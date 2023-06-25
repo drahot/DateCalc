@@ -20,4 +20,4 @@ jobs:
       - name: Build Linux framework
         run: |
           swift build
-          swift test
+          swift test --enable-test-discovery

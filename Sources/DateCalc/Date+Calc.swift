@@ -1,7 +1,3 @@
-//
-// Created by 堀田竜也 on 2023/06/18.
-//
-
 import Foundation
 
 public func -(lhs: Date, rhs: Date) -> DateComponents {
